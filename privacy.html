@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Privacy policy for the personal-use Hermes Encrypted Drive application.">
+  <meta name="referrer" content="no-referrer">
+  <title>Privacy policy — Hermes Encrypted Drive</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="site-header">
+    <a class="brand" href="./">Hermes Encrypted Drive</a>
+    <nav aria-label="Main navigation"><a href="./">About</a><a href="privacy.html" aria-current="page">Privacy</a></nav>
+  </header>
+  <main id="main">
+    <p class="eyebrow">Application information</p>
+    <h1>Privacy policy</h1>
+    <p class="revision">Effective date: November 12, 2026</p>
+    <p class="intro">Hermes Encrypted Drive is a personal-use storage utility operated by the owner of the connected Google account. This policy describes that configured utility and this documentation website.</p>
+    <section aria-labelledby="data">
+      <h2 id="data">1. Data accessed and purpose</h2>
+      <p>The application uses Google's <code>drive.file</code> permission to create, read, update and delete files and folders created by the application or specifically authorized for it. It processes their contents and metadata, such as names, identifiers, sizes and modification times, to provide encrypted upload, download, listing and file management.</p>
+      <p>It uses OAuth access and refresh tokens to maintain the Google Drive connection. It does not request Gmail or Calendar access, the account's password, or unrestricted access to every file in Drive.</p>
+    </section>
+    <section aria-labelledby="storage">
+      <h2 id="storage">2. Encryption and storage</h2>
+      <p>The configured rclone crypt layer encrypts file contents and file and folder names locally before transfer to Google Drive. The owner holds the encryption keys; the keys are not uploaded to Google Drive as part of this storage configuration. Encryption recovery material is stored separately in the owner's 1Password vault.</p>
+      <p>Google stores the encrypted objects and may process associated metadata, including sizes, counts, timestamps and access activity. Encryption does not conceal all metadata.</p>
+      <p>The owner's computer can hold decrypted files and a decrypted filesystem cache. OAuth credentials are stored in locally permission-restricted configuration files. Local applications running with sufficient permissions can access decrypted data. This utility is not a guarantee against compromise of the owner's computer or account.</p>
+      <p>Encryption applies to transfers through the configured encrypted storage path, not to unrelated uploads made using Google's website or other clients.</p>
+    </section>
+    <section aria-labelledby="sharing">
+      <h2 id="sharing">3. Use and disclosure</h2>
+      <p>Google user data is used to provide and maintain the requested personal storage functionality. The application does not sell Google user data, use it for advertising, or transfer it to data brokers. The configured storage operation does not send file contents to AI model providers or use them to train models.</p>
+      <p>Google receives the encrypted storage objects and the information needed to operate its API. 1Password stores the owner's separately configured encryption recovery material. Any sharing or processing the owner independently initiates through other applications is outside this storage utility.</p>
+      <p>Hermes Encrypted Drive's use and transfer of information received from Google APIs will adhere to the <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>, including its Limited Use requirements.</p>
+    </section>
+    <section aria-labelledby="retention">
+      <h2 id="retention">4. Retention and deletion</h2>
+      <p>Encrypted files remain in Google Drive until the owner deletes them. Deleted objects may remain in Drive's trash until permanently removed under Google's retention behavior. Independent backups are retained according to the owner's choices.</p>
+      <p>Local cache retention depends on cache settings and pending transfers. Open or not-yet-uploaded files can remain cached longer than the configured target. Do not delete a cache containing pending uploads.</p>
+      <p>To remove the application and its data, the owner can stop the mount, complete or cancel pending transfers, revoke Google access, delete the app-managed Drive files and empty the relevant trash, then remove local credentials, decrypted copies and caches and any unwanted recovery backups. These are separate actions; revoking access alone does not delete stored files.</p>
+    </section>
+    <section aria-labelledby="control">
+      <h2 id="control">5. Control and revocation</h2>
+      <p>The owner can revoke the application's access through <a href="https://myaccount.google.com/connections">Google Account third-party connections</a>. Revocation prevents future authorized API access once existing credentials cease to be valid; it does not erase previously stored data.</p>
+      <p>Keep encryption recovery material until all retained encrypted data is no longer needed. Losing the keys can make the encrypted files unrecoverable.</p>
+    </section>
+    <section aria-labelledby="website">
+      <h2 id="website">6. This documentation website</h2>
+      <p>The website contains static documentation only. It has no sign-in, upload forms, embedded tracking scripts, added analytics, or application cookies. It does not receive Google OAuth tokens or access Drive files.</p>
+      <p>The site is intended for hosting on GitHub Pages. GitHub may collect standard technical information from visitors, including IP addresses and request logs, under the <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">GitHub General Privacy Statement</a>.</p>
+    </section>
+    <section aria-labelledby="contact">
+      <h2 id="contact">7. Contact and changes</h2>
+      <p>For questions about this application, privacy, access or deletion, contact the operator at <a href="mailto:kyoungrok.openclaw@gmail.com">kyoungrok.openclaw@gmail.com</a>. Correspondence is used to respond to the request and may be retained in the operator's email account.</p>
+      <p>Material changes to this policy will be reflected on this page with an updated effective date.</p>
+    </section>
+  </main>
+  <footer><a href="./">About Hermes Encrypted Drive</a><p>Personal-use configuration. Not an official Google, rclone, or Nous Research product.</p></footer>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Hermes Encrypted Drive is a personal storage utility that encrypts file contents and names before uploading them to Google Drive.">
+  <meta name="referrer" content="no-referrer">
+  <title>Hermes Encrypted Drive</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="site-header">
+    <a class="brand" href="./">Hermes Encrypted Drive</a>
+    <nav aria-label="Main navigation"><a href="./" aria-current="page">About</a><a href="privacy.html">Privacy</a></nav>
+  </header>
+  <main id="main">
+    <p class="eyebrow">Personal storage utility</p>
+    <h1>Encrypted files.<br>Your Google Drive.</h1>
+    <p class="intro">Hermes Encrypted Drive uses <a href="https://rclone.org/crypt/">rclone crypt</a> to encrypt file contents and file and folder names on the owner's computer before uploading them to Google Drive.</p>
+    <p>This is a private-use, owner-operated configuration, not a public storage service. This website provides application information and a privacy policy. It does not connect to your Drive, accept uploads, or ask for Google credentials.</p>
+    <section aria-labelledby="purpose">
+      <h2 id="purpose">What the application does</h2>
+      <p>A local filesystem mount lets the owner read and write decrypted files while the configured Google Drive storage receives encrypted data and encrypted names. Downloads are decrypted locally using the owner's encryption keys.</p>
+      <p>Encryption protects file contents and names within this configured mount. It does not hide all metadata: Google can still observe information such as object counts, sizes, timestamps and access activity. Files uploaded directly through other applications are not automatically encrypted by this utility.</p>
+    </section>
+    <section aria-labelledby="access">
+      <h2 id="access">Google access requested</h2>
+      <p>The application requests <code>https://www.googleapis.com/auth/drive.file</code> to create and manage its encrypted storage and to access files specifically authorized for it. It does not request access to Gmail, Calendar, or the entire contents of the owner's Drive.</p>
+      <p>Google authorization takes place separately through the owner's installed application. There is no authorization or sign-in flow on this website.</p>
+    </section>
+    <section aria-labelledby="privacy">
+      <h2 id="privacy">Privacy and contact</h2>
+      <p>Read the <a href="privacy.html">privacy policy</a> for details about data access, local caching, encryption, retention and revoking access.</p>
+      <p>Application operator and support: <a href="mailto:kyoungrok.openclaw@gmail.com">kyoungrok.openclaw@gmail.com</a></p>
+    </section>
+  </main>
+  <footer><p>Personal-use configuration. Not an official Google, rclone, or Nous Research product.</p><a href="privacy.html">Privacy policy</a></footer>
+</body>
+</html>
